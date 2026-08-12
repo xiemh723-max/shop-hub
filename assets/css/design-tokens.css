@@ -1,0 +1,52 @@
+/* design-tokens.css — StorePilot 全站唯一设计源「宪法」。
+ * 任何页面不得修改、不得绕过此文件；改设计 = 改 tokens，不是改单个页面。
+ * 品牌：StorePilot 靠谱店铺导航 · 白底简洁专业 · 工具站
+ */
+:root{
+
+  /* ===== 品牌色 ===== */
+  --navy:#162A5C;         /* 深海军蓝 · 主色（专业/可信） */
+  --navy-soft:#EEF2FB;    /* 浅蓝底 */
+
+  --blue:#2F6BFF;         /* 电光蓝 · 强调（搜索/跳转） */
+  --blue-deep:#1F4FD8;    /* 深电光蓝 · hover */
+  --blue-soft:#E7EEFF;    /* 浅蓝强调底 */
+
+  --gold:#C9A24B;         /* 金 · 示例/新数据提示 */
+  --gold-soft:#F7F0E0;
+  --gold-deep:#6B4F1B;    /* 金色上的文字（对比度 ≥4.5:1） */
+
+  --green:#16845A;        /* 靠谱/现货标记 */
+  --green-soft:#E3F5EC;
+  --on-blue:#FFFFFF;      /* 蓝底按钮文字 */
+
+  /* ===== 中性色 ===== */
+  --bg:#F6F8FB;           /* 极浅蓝灰底 */
+  --surface:#FFFFFF;      /* 卡片白底 */
+  --ink:#14213D;          /* 正文墨蓝 */
+  --muted:#5A6B85;        /* 次要文字 */
+  --border:#E3E8F0;       /* 分隔线 */
+  --border-strong:#C8D1E0;
+
+  /* ===== 字体（零 CDN · 系统栈） ===== */
+  --font-body:"Segoe UI","PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  --font-display:"Segoe UI","Bahnschrift","PingFang SC","Microsoft YaHei",sans-serif;
+  --font-mono:"SF Mono","Consolas","Cascadia Code","Courier New",monospace;
+
+  /* ===== 形状 ===== */
+  --radius:14px;
+  --radius-sm:9px;
+  --radius-lg:22px;
+  --radius-full:99px;
+  --shadow-sm:0 2px 8px rgba(20,33,61,.05),0 8px 24px rgba(20,33,61,.06);
+  --shadow-md:0 10px 30px rgba(20,33,61,.10),0 20px 44px rgba(47,107,255,.10);
+  --shadow-blue:0 12px 34px rgba(47,107,255,.20);
+
+  /* ===== 布局 ===== */
+  --container:1080px;
+  --gutter:20px;
+
+  /* 过渡 */
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --dur:.28s;
+}

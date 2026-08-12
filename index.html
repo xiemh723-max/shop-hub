@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StorePilot 靠谱店铺导航｜一搜四平台 · 阿里巴巴/淘宝/立创/云汉芯城</title>
+<meta name="description" content="输入商品或芯片型号，一键整理阿里巴巴、淘宝、立创商城、云汉芯城的靠谱店铺，点击直达。店铺数据实时更新，可自助维护。">
+<link rel="canonical" href="https://shop-hub-60l.pages.dev/">
+<meta property="og:title" content="StorePilot 靠谱店铺导航">
+<meta property="og:description" content="一搜四平台，靠谱店铺直达。阿里巴巴 / 淘宝 / 立创商城 / 云汉芯城，数据实时更新。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shop-hub-60l.pages.dev/">
+<meta property="og:image" content="https://shop-hub-60l.pages.dev/favicon.svg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/design-tokens.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "StorePilot 靠谱店铺导航",
+  "applicationCategory": "ShoppingApplication",
+  "operatingSystem": "Any",
+  "url": "https://shop-hub-60l.pages.dev/",
+  "description": "输入商品或芯片型号，一键整理阿里巴巴、淘宝、立创商城、云汉芯城的靠谱店铺，点击直达。"
+}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="#">
+      <span class="mark">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#162A5C"/>
+          <path d="M32 14a17 17 0 0 1 17 17h-6a11 11 0 0 0-11-11v-6z" fill="#2F6BFF"/>
+          <circle cx="32" cy="31" r="8" fill="#fff"/>
+          <circle cx="32" cy="31" r="3" fill="#2F6BFF"/>
+          <path d="M32 39l-7 11h14l-7-11z" fill="#C9A24B"/>
+        </svg>
+      </span>
+      <span>StorePilot<span class="sub">&nbsp;靠谱店铺导航</span></span>
+    </a>
+    <nav class="top-links">
+      <a href="#how">如何更新数据</a>
+      <a href="https://github.com/xiemh723-max/shop-hub" target="_blank" rel="noopener">GitHub 数据源</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">一搜 · 四平台 · 直达靠谱店铺</span>
+      <h1>搜一个商品，<em>四平台的靠谱店铺</em></h1>
+      <p class="lead">输入商品名或芯片型号，自动整理阿里巴巴、淘宝、立创商城、云汉芯城的靠谱店铺；点卡片直接跳转。店铺数据实时更新。</p>
+      <form class="search-bar" id="searchForm" role="search">
+        <label class="sr-only" for="q">搜索商品或芯片型号</label>
+        <input type="search" id="q" placeholder="如：录音芯片 · STM32 · 贴片电容 · 传感器" autocomplete="off" autocapitalize="off">
+        <button type="submit">搜店铺</button>
+      </form>
+      <div class="quick-tags" id="quickTags">
+        <span class="qt-label" style="font-weight:600;color:var(--muted)">试试：</span>
+        <span class="tag">录音芯片</span>
+        <span class="tag">STM32</span>
+        <span class="tag">贴片电容</span>
+        <span class="tag">温度传感器</span>
+      </div>
+      <div class="status" id="status" hidden></div>
+    </div>
+  </section>
+
+  <section id="results" class="container" aria-live="polite">
+    <div class="result-head">
+      <h2 id="resultTitle">「<span class="q" id="qLabel"></span>」的靠谱店铺</h2>
+      <div class="result-meta">
+        <span id="dataMeta"></span>
+        <button class="btn-ghost" id="refreshBtn" type="button">↻ 刷新数据</button>
+      </div>
+    </div>
+
+    <!-- 无预置数据：四平台直达搜索 -->
+    <div class="direct-box" id="directBox" hidden>
+      <h3>还没有该商品的预置店铺数据 <span class="hint">——先一键直达平台搜索，店铺数据可随时补充（见页底说明）</span></h3>
+      <div class="direct-grid" id="directGrid"></div>
+    </div>
+
+    <div class="store-grid" id="storeGrid"></div>
+  </section>
+
+  <section class="note">
+    <div class="container">
+      <div class="note-box" id="how">
+        <h3>📦 店铺数据如何「实时更新」？</h3>
+        <ol>
+          <li>数据源在 GitHub 仓库 <code>shop-hub/data/shops.json</code>，本站每次加载都会拉取最新版本；</li>
+          <li>你要加店铺 / 改链接 / 删店铺：直接编辑该 JSON 并提交，刷新本站即生效，<b>无需重新部署</b>；</li>
+          <li>JSON 结构见 <a href="https://github.com/xiemh723-max/shop-hub/blob/main/data/shops.json" target="_blank" rel="noopener">shops.json</a> 与 <a href="https://github.com/xiemh723-max/shop-hub/blob/main/README.md" target="_blank" rel="noopener">README</a>，照着复制一条改就行；</li>
+          <li>带「示例」徽标的数据为演示数据，替换为真实店铺后可去掉 <code>demo</code> 标记。</li>
+        </ol>
+        <a class="gh-link" href="https://github.com/xiemh723-max/shop-hub" target="_blank" rel="noopener">→ 打开数据仓库</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>StorePilot · 店铺数据由社区与本站共同维护，跳转链接均指向平台官方页面。</span>
+    <span class="fw" id="footerMeta"></span>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "updatedAt": "2026-08-12T00:00:00Z",
+  "owner": "xiemh723-max",
+  "repo": "shop-hub",
+  "note": "===== 实时更新说明 =====\n编辑本文件并提交到 GitHub 的 main 分支，网站下次加载即生效，无需重新部署。\n\n每个 entry = 一组关键词对应一批靠谱店铺：\n  - keywords: 搜索关键词（支持多个别名）\n  - stores:   靠谱店铺列表，platform 用固定 key（alibaba/taobao/lcsc/ickey）\n  - demo: true 表示示例数据，替换为真实店铺后删掉该字段即可\n\n复制下面任意一个 entry 改内容，就是一条新数据。",
+  "entries": [
+    {
+      "id": "demo-recorder-chip",
+      "keywords": ["录音芯片", "AI录音芯片", "录音笔芯片", "recorder chip"],
+      "stores": [
+        { "platform": "lcsc", "name": "立创商城自营 · 智能录音方案专区", "tag": "自营 · 现货", "url": "https://so.szlcsc.com/global.html?k=录音芯片", "demo": true },
+        { "platform": "ickey", "name": "云汉芯城 · 语音处理芯片专柜", "tag": "授权分销", "url": "https://www.ickey.com/search/result?key=录音芯片", "demo": true },
+        { "platform": "alibaba", "name": "深圳声芯电子（示例，请替换为真实店铺）", "tag": "工厂 · 示例", "url": "https://s.1688.com/selloffer/offer_search.htm?keywords=录音芯片", "demo": true },
+        { "platform": "taobao", "name": "示例店 · 请替换为真实店铺", "tag": "示例数据", "url": "https://s.taobao.com/search?q=录音芯片", "demo": true }
+      ]
+    },
+    {
+      "id": "demo-stm32",
+      "keywords": ["STM32", "stm32f103", "stm32f407", "单片机", "MCU"],
+      "stores": [
+        { "platform": "lcsc", "name": "立创商城 · ST 授权分销专区", "tag": "原厂授权 · 现货", "url": "https://so.szlcsc.com/global.html?k=STM32F103C8T6", "demo": true },
+        { "platform": "ickey", "name": "云汉芯城 · ST 器件自营专柜", "tag": "原厂授权", "url": "https://www.ickey.com/search/result?key=STM32F103C8T6", "demo": true },
+        { "platform": "alibaba", "name": "意法半导体授权经销商（示例）", "tag": "授权经销 · 示例", "url": "https://s.1688.com/selloffer/offer_search.htm?keywords=STM32", "demo": true }
+      ]
+    },
+    {
+      "id": "demo-capacitor",
+      "keywords": ["贴片电容", "MLCC", "陶瓷电容", "电容"],
+      "stores": [
+        { "platform": "lcsc", "name": "立创商城 · MLCC 电容专区", "tag": "自营 · 海量现货", "url": "https://so.szlcsc.com/global.html?k=MLCC", "demo": true },
+        { "platform": "ickey", "name": "云汉芯城 · 被动器件专柜", "tag": "授权分销", "url": "https://www.ickey.com/search/result?key=MLCC", "demo": true },
+        { "platform": "taobao", "name": "示例店铺（请替换为真实店铺）", "tag": "示例数据", "url": "https://s.taobao.com/search?q=贴片电容", "demo": true }
+      ]
+    }
+  ]
+}
